@@ -1,0 +1,82 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  overflow-y: hidden;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+}
+h1 {
+  font-weight: 500;
+
+  font-size: 2.4rem;
+}
+
+.mainContainer {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.display {
+  grid-column: 1/4;
+  text-align: center;
+  font-size: 1.8rem;
+  background: #99640f;
+  width: 19rem;
+  min-height: 3rem;
+  margin-bottom: 10px;
+  border: 1px solid black;
+  word-wrap: break-word;
+  color: whitesmoke;
+}
+
+.btnContainer {
+  display: grid;
+  grid-template-columns: repeat(3, 0.1fr);
+  gap: 0.5rem;
+}
+.btn-number,
+.btn-operator {
+  width: 6rem;
+  height: 6rem;
+  font-size: 1.7rem;
+}
+.btn-equal {
+  grid-column: 1/4;
+  height: 3rem;
+  font-size: 2rem;
+  background: #0077a8;
+}
+.btn-operator {
+  background: #eee3d1;
+  border: 0.5px solid #db8e16;
+}
+.btn-operator:hover {
+  background: #db8e16;
+}
+.btn-equal:hover,
+.btn-cancel:hover {
+  filter: brightness(0.8);
+}
+.btn-cancel {
+  width: 6rem;
+  height: 6rem;
+  font-size: 1.7rem;
+  background: #db8e16;
+}
+
+@media (max-height: 900px) {
+  body {
+    overflow-y: auto;
+  }
+}
